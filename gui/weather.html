@@ -1,0 +1,92 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="linkers/weather.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style type="text/css">
+        .btn-circle.btn-xl {
+            width: 70px;
+            height: 70px;
+            padding: 10px 16px;
+            border-radius: 35px;
+            font-size: 12px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button class="btn btn-info"><a style="color:white" href="gui.html">< Back</a></button>
+        <br>
+        <br>
+        <div class="jumbotron" style="height: 50px" style=" padding-top: 30px;">
+            <h5 class="text-center">Note : To Analyze Tonic Range the singer has to sing Avroh and Aroh in 3 different tonic notes </h5>
+        </div>
+        <div class="row ">
+            <div class="col-sm-7 ">
+                <div class="input-group ">
+                    <label>Select Tonic Note:  </label>
+                    <select class="custom-select " style="width: 200px ;height: 32px;">
+                      <option selected>Choose...</option>
+                      <option value="1 ">120</option>
+                      <option value="2 ">130</option>
+                      <option value="3 ">140</option>
+                      </select>
+                    <button class="btn btn-success " onclick="get_weather() ">Select</button>
+                </div>
+                <br>
+                <br><br>
+                <button type="button" class="btn btn-primary btn-circle btn-xl" style="margin-right:50px"><i class="fa fa-microphone fa-3x" ></i></button>
+
+                <button type="button" class="btn btn-secondary btn-circle btn-xl" style="margin-right:50px"><i class="fa fa-stop fa-3x"></i></button>
+
+                <button type="button" class="btn btn-success btn-circle btn-xl"><i class="fa fa-volume-up fa-3x"></i> </button>
+                <br>
+                <label style="margin-left:10px;margin-right:90px,">Record</label>
+                <label style="margin-left:80px;margin-right:85px">Stop</label>
+                <label>Listen</label>
+                <br>
+            </div>
+
+            <div class="col-sm-5 ">
+                <button class="btn btn-info btn-lg " onclick="get_weather() " style="width: 275px ">View Power Spectrum</button>
+                <br>
+                <br>
+
+                <button class="btn btn-info btn-lg " onclick="get_weather() " style="width: 275px ">View Tristimulus Diagram</button>
+                <br>
+                <br>
+
+                <button class="btn btn-info btn-lg " style="width: 275px ">Analyze</button>
+            </div>
+
+        </div>
+        <br>
+
+        <div class="row">
+            <div class="col-xs-4">
+                <br>
+                <label>Lowest Note:  </label>
+                <br>
+                <button class="btn btn-info btn-lg " style="margin-left:30px;"><a style="color:white " href="weather.html "></a></button>
+            </div>
+            <div class="col-xs-4 ">
+                <br>
+                <label>Highest Note:  </label>
+                <br>
+                <button class="btn btn-info btn-lg " style="margin-left:30px;"> <a style="color:white " href="vocalfeatures.html "></a></button>
+            </div>
+            <div class="col-xs-4 ">
+                <br> <label>Tonic Range:  </label>
+                <br>
+                <button class="btn btn-info btn-lg" style="margin-left:30px;"><a style="color:white; " href="http://127.0.0.1:5000/detect "></a></button>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+
+    <body>
